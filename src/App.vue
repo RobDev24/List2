@@ -4,25 +4,32 @@
   <div class="navigation">
 
     <nav>
-      <ul>
+      <div class="router">
+            <router-link class="link" to="/">Inicio</router-link>
+            <router-link class="link" to="/about">Procedimentos</router-link>
+            <router-link class="link" to="/">Preços</router-link>
+            <router-link class="link" to="/about">Galeria</router-link>
+            <router-link class="link" to="/about">Contato</router-link>
+          </div>
 
-        <li class="dropdown">
-          <a href="">Menu</a>
+          <div class="cadastro">
+            <router-link class="cad-user" to="/">Cadastre-se</router-link>
+          </div>
 
-          <div class="dropdown-menu">
-            <a href="">home</a>
-            <a href="">Seviços</a>
-            <a href="">Contato</a>
-            </div>
-
-        </li>
-      </ul>
-
+          <div class="login">
+            <router-link class="user" to="/">Login</router-link>
+          </div>
     </nav>
 
   </div>
+  <router-view/>
  </div>
 </template>
+
+<script>
+
+
+</script>
 
 <style scoped>
 *{
@@ -31,38 +38,71 @@
   box-sizing: border-box;
 }
 
-nav{
-  background-color: blue;
+#nav{
+  background-color: aqua;
+  
 }
 
-nav li{
-display: inline-block;
-margin-left: 94%;
+.router{
 
+padding: 10px 4px 10px 200px;
 }
 
-nav li a{
-  display: inline-block;
-  color: aliceblue;
+.login{
+  float: right;
+  margin-top: -30px;
+  margin-right: 70px;
+  border-radius: 15px;
+  padding: 0px 15px 0px 15px;
+  
+  }
+.user{
+  color: #fff;
   text-decoration: none;
-  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-nav li a:hover{
-  background-color: blueviolet;
+.login:hover{
+  background-color: red;
+  color:aquamarine;
+}
+.cadastro{
+  float: right;
+  margin-top: -30px;
+  margin-right: 200px;
+  padding: 0px 15px 0px 15px;
+  border-radius: 15px;
+}
+.cad-user{
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.dropdown-menu{
-  position: absolute;
-  box-shadow: 0 0 2px black;
-  display: none;
+.cadastro:hover{
+  background-color: red;
+  color:aquamarine;
 }
-.dropdown-menu a{
-  display: block;
-  color: black;
-  }
+.link{
+  color: azure;
+  padding: 0px 15px 0px 15px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  border-radius: 15px;
+  
+}
+.link:hover{
+  background-color: red;
+  color:aquamarine;
 
-  .dropdown:hover .dropdown-menu{
-    display: block;
-  }
+}
+nav{
+  background-color: black;
+  
+}
+.navigation{
+  border: 2px solid #fff;
+}
+
 </style>
